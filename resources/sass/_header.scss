@@ -27,23 +27,26 @@
             position: absolute;
             left: 0;
             right: 0;
-            top: -100vh;
-            height: 100vh;
-            backdrop-filter: blur(20px);
+            top: 100vh;
+            height: 150px;
             opacity: 0;
             pointer-events: none;
             transition: $duration;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            border-top: 1px solid #B2B1D2;
+            border-radius: 16px 16px 0px 0px;
+            background-color: #fff;
+            padding: 24px 16px;
         }
         ul {
             display: flex;
             align-items: center;
             list-style: none;
             @include tablet {
-                flex-direction: column;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+            @include mobile {
+                justify-content: space-between;
             }
         }
         li {
@@ -51,7 +54,12 @@
                 margin-right: 48px;
                 @include tablet {
                     margin-right: 0;
-                    margin-bottom: 36px;
+                }
+            }
+            &:last-child {
+                @include mobile {
+                    width: 100%;
+                    margin-top: 32px;
                 }
             }
         }
@@ -61,6 +69,7 @@
         margin-left: 32px;
         @include tablet {
             margin-left: 0;
+            width: 100%;
         }
     }
 
@@ -110,7 +119,7 @@
             @include tablet {
                 opacity: 1;
                 pointer-events: auto;
-                top: 0;
+                top: calc(100vh - 150px);
             }
         }
     }

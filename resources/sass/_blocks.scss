@@ -386,6 +386,9 @@
             align-items: center;
             &:not(:last-child) {
                 margin-right: 32px;
+                @include mobile {
+                    margin-right: 8px;
+                }
             }
             &:hover {
                 &::after {
@@ -407,11 +410,11 @@
                     transition: $duration;
                 }
             }
-            &.mail {
-                @include mobile {
-                    display: none;
-                }
-            }
+            // &.mail {
+            //     @include mobile {
+            //         display: none;
+            //     }
+            // }
         }
         span {
             position: relative;
