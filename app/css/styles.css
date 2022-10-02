@@ -4176,13 +4176,17 @@ main {
       z-index: 2;
       max-width: 350px;
       color: #535868; }
-    .block-products .product-store {
+    .block-products .product-stores {
       margin-top: auto;
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      display: flex;
+      flex-direction: column; }
       @media screen and (max-width: 767px) {
-        .block-products .product-store {
+        .block-products .product-stores {
           margin-top: 0; } }
+    .block-products .product-store:not(:last-child) {
+      margin-bottom: 16px; }
 
 .block-contacts {
   padding-top: 165px;

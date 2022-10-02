@@ -323,12 +323,19 @@
             max-width: 350px;
             color: $semi-deep-purple;
         }
-        &-store {
+        &-stores {
             margin-top: auto;
             position: relative;
             z-index: 2;
+            display: flex;
+            flex-direction: column;
             @include mobile {
                 margin-top: 0;
+            }
+        }
+        &-store {
+            &:not(:last-child) {
+                margin-bottom: 16px;
             }
         }
     }
